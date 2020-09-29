@@ -1,4 +1,4 @@
 build:
-	docker build -t wranglatang/docker-bluelinky .
+	docker build -t wranglatang/bluelinky .
 run:
-	docker run -p 8080:8080 -v "${PWD}:/config" wranglatang/docker-bluelinky:latest
+	docker run -p 8080:8080 -e LOG_LEVEL=debug -v "${PWD}:/config" wranglatang/bluelinky:latest
