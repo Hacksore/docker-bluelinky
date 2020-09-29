@@ -22,8 +22,7 @@ const middleWare = async (req, res, next) => {
     username: config.username, 
     password: config.password,
     pin: config.pin,
-    region: config.region,
-    deviceUuid: config.deviceUuid
+    region: config.region
   });
 
   client.on('ready', () => {
