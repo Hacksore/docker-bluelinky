@@ -2,8 +2,7 @@
   "name": "docker-bluelinky",
   "version": "5.2.0",
   "description": "Running bluelinky on express in docker",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "wranglatang",
   "license": "MIT",
   "dependencies": {

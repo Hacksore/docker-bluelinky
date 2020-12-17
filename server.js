@@ -37,12 +37,22 @@ app.use(middleWare);
 // Start Climate at set temperature and for set period of time
 app.post('/start', async (req, res) => { 
   let response;
+
+  const { 
+    igniOnDuration = 10, 
+    airTempvalue = 70, 
+    airCtrl = false, 
+    defrost = false, 
+    heating1 = false 
+  } = req.body;
+
   try {
     response = await vehicle.start({
-      airCtrl: true,
-      igniOnDuration: 10,
-      temperature: 20.0,
-      defrost: false
+      airCtrl,
+      igniOnDuration,
+      airTempvalue,
+      defrost,
+      heating1
     });
   } catch (e) {
     response = {
